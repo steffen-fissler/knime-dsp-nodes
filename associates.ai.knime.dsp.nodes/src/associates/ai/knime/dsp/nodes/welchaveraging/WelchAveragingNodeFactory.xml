@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode icon="./WelchAveraging.png" type="Manipulator" xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
+    <name>Welch Averaging</name>
+
+    <shortDescription>This node bundles together a number of rows and takes an average in every column for this bundle.</shortDescription>
+
+    <fullDescription>
+        <intro>
+          This node bundles together a number of rows and takes an average in every column for this bundle.
+          <br/>
+          The node goes together with the Fast Fourier Transformer(FFT) Node as well as the Window Slider Node and is able to reduce noise components in your FFT results.
+
+          <br/><br/>
+          This node is part of the DSP Extensions provided by AI.Associates GmbH, Germany. For more information please refer to https://ai.associates/knime or write an email to knime@ai.associates.
+        </intro>
+        <option name="Rows">This option controls how many rows are bundled together for averaging.</option>
+    </fullDescription>
+
+    <ports>
+        <inPort index="0" name="Input table">Input table consisting of following windows of Fourier transformed signals.</inPort>
+        <outPort index="0" name="Output table">Output table consisting of averaged windows.</outPort>
+    </ports>
+</knimeNode>

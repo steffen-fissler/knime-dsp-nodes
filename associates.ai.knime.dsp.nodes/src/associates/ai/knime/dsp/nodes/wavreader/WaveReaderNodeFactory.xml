@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode icon="./WavReader.png" type="Source" xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
+    <name>WAV Reader</name>
+
+    <shortDescription>
+        This node reads in .wav files.
+    </shortDescription>
+
+    <fullDescription>
+        <intro>
+          This node reads in .wav files. For each channel in the .wav file the node creates an output column where the channel signal is stored.
+          <br />
+          The sample rate is available from the flow variable, the unit is in Hz.
+          
+          <br/><br/>
+          This node is part of the DSP Extensions provided by AI.Associates GmbH, Germany. For more information please refer to https://ai.associates/knime or write an email to knime@ai.associates.
+        </intro>
+        
+        <option name="Selected File">Select input file.</option>
+    </fullDescription>
+
+    <ports>
+        <outPort index="0" name="Data table">A table with the signals from the .wav file channels stored in separate columns.</outPort>
+    </ports>
+</knimeNode>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode icon="./FFT.png" type="Manipulator" xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
+    <name>Fast Fourier Transform (FFT)</name>
+
+    <shortDescription>This node performs a forward Fast Fourier Transformation(FFT) on each row of the input table. Generally speaking, it extracts the frequencies of an input signal.</shortDescription>
+
+    <fullDescription>
+        <intro>
+          This node performs a forward Fast Fourier Transformation(FFT) on each row of the input table.
+          Generally speaking, it extracts the frequencies of an input signal.
+          The number of columns of the table must be a power of 2, i.e. 2, 4, 8, 16, 32, 64, ...
+          To achieve this you might want to use the Window Slider Node before this node.
+          <br/>
+          There are #(input columns)/2 + 1 output columns, so called frequency bins, e.g.
+          if we have 256 input columns we will get 129 output columns. In order for these
+          frequency bins to be labeled correctly, you need to configure the node with the correct sample rate.
+          <br />
+          All Frequencies are meant to be in Hz.
+          <br/>
+          The actual output of the FFT is a row of complex numbers, in order to make subsequent processing simpler, this node outputs the absolute value of each of these complex numbers.
+
+          <br/><br/>
+          This node is part of the DSP Extensions provided by AI.Associates GmbH, Germany. For more information please refer to https://ai.associates/knime or write an email to knime@ai.associates.
+        </intro>
+
+
+        <option name="Normalization">This option controls the normalization factor of the FFT, in most cases "standard" is a good choice.</option>
+        <option name="Sample Rate">This is important for the accurate labeling of the output columns. The input should be in Hz.</option>
+    </fullDescription>
+
+    <ports>
+        <inPort index="0" name="Input table">A table with input signals.</inPort>
+        <outPort index="0" name="Output table">A table with frequency decompositions.</outPort>
+    </ports>
+</knimeNode>

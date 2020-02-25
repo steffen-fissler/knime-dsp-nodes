@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.knime.workbench.repository.nodes">
+      <node
+            category-path="/community/dsp"
+            deprecated="false"
+            factory-class="associates.ai.knime.dsp.nodes.wavreader.WaveReaderNodeFactory">
+      </node>
+      <node
+            category-path="/community/dsp"
+            deprecated="false"
+            factory-class="associates.ai.knime.dsp.nodes.timedomainfeatures.TimeDomainFeaturesNodeFactory">
+      </node>
+      <node
+            category-path="/community/dsp"
+            deprecated="false"
+            factory-class="associates.ai.knime.dsp.nodes.frequencydomainfeatures.FrequencyDomainFeaturesNodeFactory">
+      </node>
+      <node
+            category-path="/community/dsp"
+            deprecated="false"
+            factory-class="associates.ai.knime.dsp.nodes.fastfouriertransform.FastFourierTransformNodeFactory">
+      </node>
+      <node
+            category-path="/community/dsp"
+            deprecated="false"
+            factory-class="associates.ai.knime.dsp.nodes.windowslider.WindowSliderNodeFactory">
+      </node>
+      <node
+            category-path="/community/dsp"
+            deprecated="false"
+            factory-class="associates.ai.knime.dsp.nodes.welchaveraging.WelchAveragingNodeFactory">
+      </node>
+      <node
+            category-path="/community/dsp"
+            deprecated="false"
+            factory-class="associates.ai.knime.dsp.nodes.windowfunction.WindowFunctionNodeFactory">
+      </node>
+   </extension>
+
+   <extension
+         point="org.knime.workbench.repository.categories">
+         <category
+            description="DSP"
+            icon="icons/category_dsp.png"
+            level-id="dsp"
+            name="Signal Processing (AI.Associates)"
+            path="/community">
+      </category>
+   </extension>
+   <extension
+         point="org.knime.product.splashExtension">
+      <splashExtension
+            icon="icons/48x48.png"
+            icon24="icons/24x24.png"
+            icon32="icons/32x32.png"
+            id="associates.ai.knime.dsp.nodes.splashExtension"
+            tooltip="Digital Signal Processing Extension by AI.Associates">
+      </splashExtension>
+   </extension>
+	<extension
+           point="org.knime.workbench.repository.registeredFileExtensions">
+        <FileExtensionMapping
+              NodeFactory="associates.ai.knime.dsp.nodes.wavreader.WaveReaderNodeFactory">
+           <FileExtension
+                 extension=".wav">
+            </FileExtension>
+            </FileExtensionMapping>
+        </extension>
+                 
+   
+</plugin>

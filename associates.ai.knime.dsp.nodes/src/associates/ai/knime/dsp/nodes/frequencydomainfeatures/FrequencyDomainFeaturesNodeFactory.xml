@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode icon="./icon.png" type="Manipulator" xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
+    <name>Frequency Domain Features (FDF)</name>
+
+    <shortDescription>This node computes statistics in the frequency domain.
+The chosen statistics will be computed for each row.</shortDescription>
+
+    <fullDescription>
+        <intro>
+          This node computes statistics in the frequency domain.
+          <br />
+          The chosen statistics will be computed for each row. All frequencies are in Hz.
+
+          <br/><br/>
+          This node is part of the DSP Extensions provided by AI.Associates GmbH, Germany. For more information please refer to https://ai.associates/knime or write an email to knime@ai.associates.
+        </intro>
+
+
+        <option name="Mean">Check if you want to compute mean.</option>
+        <option name="Median">Check if you want to compute median.</option>
+        <option name="Standard Deviation">Check if you want to compute standard deviation.</option>
+        <option name="25th Percentile">Check if you want to compute 25th percentile.</option>
+        <option name="75th Percentile">Check if you want to compute 75th percentile.</option>
+        <option name="RMS">Check if you want to compute root mean squared (RMS).</option>
+        <option name="Spectral Energy">Check if you want to compute spectral energy.</option>
+        <option name="Skewness">Check if you want to compute skewness.</option>
+        <option name="Kurtosis">Check if you want to compute kurtosis.</option>
+        <option name="Number of Principal Magnitudes">Select how many of the highest peaks of the spectrum you want to include in your statistics.</option>
+        <option name="Number of Principal Frequencies">Select how many of the frequencies of the highest peaks of the spectrum you want to include in your statistics.</option>
+        <option name="Sample Rate">Enter the sample rate of the original signal (in Hz) -- important for the right scaling of frequencies.</option>
+        <option name="Column Prefix">Check if you want to add a prefix to your frequency domain features.</option>
+        <option name="Padding value for principal frequencies and magnitudes">Select a padding value for principal frequencies and magnitudes.</option>
+    </fullDescription>
+
+    <ports>
+        <inPort index="0" name="Input table">A table of Fourier transformed signals in each row.</inPort>
+        <outPort index="0" name="Output table">A table with frequency domain features.</outPort>
+    </ports>
+</knimeNode>

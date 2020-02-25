@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode icon="./WindowFunction.png" type="Manipulator" xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
+    <name>Window Function</name>
+
+    <shortDescription>
+        This node multiplies the input rows with a window function to prevent spectral leakage in subsequent FFT.
+    </shortDescription>
+
+    <fullDescription>
+        <intro>
+          This node multiplies the input rows with a window function to prevent spectral leakage in subsequent FFT. You might want to use this node together with the Fast Fourier Transform (FFT) Node.
+
+          <br/><br/>
+          This node is part of the DSP Extensions provided by AI.Associates GmbH, Germany. For more information please refer to https://ai.associates/knime or write an email to knime@ai.associates.
+        </intro>
+        <option name="Window Function">Choose the appropriate window function for your signal - in case of doubt choose the Hann function.<br />
+        <ul>
+        <li><b>Hann:</b> useful for combinations of sine-waves and unknown content <br /></li>
+        <li><b>Hamming:</b> useful for closely spaced sine-waves <br /></li>
+        <li><b>Flat-Top:</b> useful for sine-waves if amplitude accuracy is important <br /></li>
+        <li><b>Blackman:</b> good general-purpose window <br /> <br /></li>
+        </ul>
+        For a good intuitive explanation of window function see for instance: <br />
+        <a href="http://www.ni.com/white-paper/4844/en/">http://www.ni.com/white-paper/4844/en/</a></option>
+    </fullDescription>
+
+    <ports>
+        <inPort index="0" name="Input table">Rows of signal windows.</inPort>
+        <outPort index="0" name="Output table">Signal rows multiplied with chosen window function.</outPort>
+    </ports>
+</knimeNode>

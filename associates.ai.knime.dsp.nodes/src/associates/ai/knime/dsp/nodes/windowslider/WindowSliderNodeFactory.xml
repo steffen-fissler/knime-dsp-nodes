@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knimeNode icon="./WindowSlider.png" type="Manipulator" xmlns="http://knime.org/node/v2.8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knime.org/node/v2.10 http://knime.org/node/v2.10.xsd">
+    <name>Window Slider</name>
+
+    <shortDescription>
+This node creates sliding windows from an input signal which is stored in a table with one column.
+    </shortDescription>
+
+    <fullDescription>
+        <intro>
+          This node creates sliding windows from an input signal. You can adjust the window length and the step size.
+
+          <br/><br/>
+          This node is part of the DSP Extensions provided by AI.Associates GmbH, Germany. For more information please refer to https://ai.associates/knime or write an email to knime@ai.associates.
+        </intro>
+
+        <option name="Window Length">Size of a window.</option>
+        <option name="Window Step">Number of time steps the window moves in one iteration - usually setting this at half the window length is a good idea.</option>
+        <option name="Perform right padding to include last row">Choose if you want to enable padding which compensates for the last window not fitting in the last bit of your data:
+            <ul>
+                <li>If you enable padding your windowed signal will include all data from original signal, with the last window padded with missing values until the desired window length is reached.<br/>
+                    <b>Tip:</b> you can use "Missing Value" node to replace them with value of your choice.
+                </li>
+                <li>If you don't enable this option, the last window will be discarded.</li>
+            </ul>
+        </option>
+    </fullDescription>
+
+    <ports>
+        <inPort index="0" name="Input table">Input table with one or more data columns column.</inPort>
+        <outPort index="0" name="Output table">Output table with #(window length) columns.</outPort>
+    </ports>
+</knimeNode>

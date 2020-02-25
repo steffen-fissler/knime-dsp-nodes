@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/associates.ai.knime.dsp.feature_1.3.0.qualifier.jar" id="associates.ai.knime.dsp.feature" version="1.3.0.qualifier">
+      <category name="Signal Processing (AI.Associates)"/>
+   </feature>
+   <category-def name="Signal Processing (AI.Associates)" label="Signal Processing (AI.Associates)">
+      <description>
+         This feature contains nodes for digital signal processing provided by AI.Associates.
+      </description>
+   </category-def>
+</site>
