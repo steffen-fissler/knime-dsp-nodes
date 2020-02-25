@@ -3,6 +3,7 @@
 **/bin
 target/
 /.idea/
+.idea/
  
 # other files
 #*.csv
