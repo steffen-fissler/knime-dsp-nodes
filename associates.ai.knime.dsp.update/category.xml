@@ -3,9 +3,6 @@
    <feature id="associates.ai.knime.dsp.feature" version="0.0.0">
        <category name="knime-dsp-nodes" />
    </feature>
-   <feature id="associates.ai.knime.dsp.feature.source" version="0.0.0">
-       <category name="knime-dsp-nodes" />
-   </feature>
 
    <category-def name="knime-dsp-nodes" label="Build artifacts from knime-dsp-nodes">
        <description>Build artifacts from knime-dsp-nodes</description>
